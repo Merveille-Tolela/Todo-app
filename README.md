@@ -1,54 +1,16 @@
-# 📝 React Todo List App
+# React + Vite
 
-A simple and interactive **Todo List application** built with **React**.  
-This project demonstrates core React concepts like **state management**, **component composition**, and **event handling**.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
----
+Currently, two official plugins are available:
 
-## 🚀 Features
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- ✅ **Add Todos** – Create new tasks easily.  
-- 🔄 **Toggle Completion** – Mark todos as completed or incomplete using checkboxes.  
-- ❌ **Delete Todos** – Remove tasks from the list instantly.  
-- 🧠 **Dynamic UI** – The list updates automatically without refreshing the page.  
+## React Compiler
 
----
+The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
 
-## 🧩 Components Overview
+## Expanding the ESLint configuration
 
-### `App.js`
-- Main component managing all todos using React's `useState` hook.  
-- Handles adding, toggling, and deleting todos.  
-- Passes event handlers to child components via props.
-
-### `NewTodoForm.js`
-- Child component responsible for capturing new todo input.  
-- Calls the parent’s `onSubmit` function to add new todos.
-
----
-
-## ⚙️ Technologies Used
-
-- **React** (with functional components)
-- **JavaScript (ES6+)**
-- **CSS3** (for styling)
-- **Vite** or **Create React App** (depending on your setup)
-
----
-
-## 🧠 Key React Concepts Demonstrated
-
-- `useState` for managing application state.
-- Updating state immutably using array spread and `map()` / `filter()`.
-- Passing props between components.
-- Controlled form input and event handling.
-- Generating unique IDs using `crypto.randomUUID()`.
-
----
-
-## 💻 Installation & Setup
-
-1. **Clone this repository:**
-   ```bash
-   git clone https://github.com/your-username/react-todo-app.git
-   cd react-todo-app
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
